@@ -5,60 +5,83 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 public class EventPage extends Page{
     @FindBy(css=".evnt-upcoming-events .evnt-card-wrapper")
-    @CacheLookup
-    private List<WebElement> numberUpcomingEventsCard;
+    @CacheLookup public List<WebElement> numberUpcomingEventsCard;
 
     @FindBy(xpath="(//li[@class=\"evnt-tab-item nav-item\"])[1]//span[last()]")
-    @CacheLookup
-    private WebElement counterUpcomingEvents;
+    @CacheLookup public WebElement counterUpcomingEvents;
 
     @FindBy(xpath="(//li[@class=\"evnt-tab-item nav-item\"])[2]//span[last()]")
-    @CacheLookup
-    private WebElement counterPastEvents;
+    @CacheLookup public WebElement counterPastEvents;
 
     @FindBy(xpath="//div[@class=\"evnt-event-details-table\"]/div[1]/p")
-    @CacheLookup
-    private WebElement cardLocation;
+    @CacheLookup public WebElement cardLocation;
 
     @FindBy(xpath="//div[@class=\"evnt-event-details-table\"]/div[2]/p")
-    @CacheLookup
-    private WebElement cardLanguage;
+    @CacheLookup public WebElement cardLanguage;
 
     @FindBy(css=".evnt-event-name span")
-    @CacheLookup
-    private WebElement cardEventTitle;
+    @CacheLookup public WebElement cardEventTitle;
 
     @FindBy(css=".evnt-event-dates-table .date")
-    @CacheLookup
-    private WebElement cardEventDate;
+    @CacheLookup public WebElement cardEventDate;
 
     @FindBy(css=".evnt-event-dates-table .status")
-    @CacheLookup
-    private WebElement cardEventStatus;
+    @CacheLookup public WebElement cardEventStatus;
 
-    @FindBy(css=".speakers-wrapper")
-    @CacheLookup
-    private WebElement cardSpeakerList;
+    @FindBy(xpath="(//div[@class=\"evnt-events-row\"])[1]//div[@class=\"evnt-speaker\"]")
+    @CacheLookup public List<WebElement> cardSpeakerList;
 
     @FindBy(xpath="(//div[@class=\"evnt-events-tabs-nav\"]//li[@class=\"evnt-tab-item nav-item\"])[2]")
-    @CacheLookup
-    private WebElement pastEventsTab;
+    @CacheLookup public WebElement pastEventsTab;
 
     @FindBy(id="filter_location")
-    @CacheLookup
-    private WebElement filterLocation;
+    @CacheLookup public WebElement filterLocation;
 
     @FindBy(xpath="//label[@data-value=\"Canada\"]")
-    @CacheLookup
-    private WebElement canadaCheckbox;
+    @CacheLookup public WebElement canadaCheckbox;
 
     @FindBy(css=".evnt-events-row a")
-    @CacheLookup
-    private WebElement upcomingEventCard;
+    @CacheLookup public WebElement upcomingEventCard;
+
+    public int cardNumberOfUpcomingEvents(){
+        return numberUpcomingEventsCard.size();
+    }
+
+    public int counterNumberOfUpcomingEvents(){
+        return Integer.parseInt(counterUpcomingEvents.getText());
+    }
+
+    public String getCardLocation(){ return cardLocation.getText(); }
+
+    public String getCardLanguage(){
+        return cardLanguage.getText();
+    }
+
+    public String getCardEventTitle(){
+        return cardEventTitle.getText();
+    }
+
+    public String getCardEventDate(){
+        return cardEventDate.getText();
+    }
+
+    public String getEventStatus(){
+        return cardEventStatus.getText();
+    }
+    
+    public int getCardSpeaker(){ return cardSpeakerList.size(); }
+
+    public Date getDateFromCard() throws ParseException {
+        return new SimpleDateFormat("dd MMM yyyy").parse(getCardEventDate());
+    }
 
 
 
