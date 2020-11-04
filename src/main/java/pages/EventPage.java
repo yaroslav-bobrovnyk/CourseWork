@@ -7,13 +7,15 @@ import org.openqa.selenium.support.FindBy;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
 public class EventPage extends Page{
     @FindBy(css=".evnt-upcoming-events .evnt-card-wrapper")
     @CacheLookup public List<WebElement> numberUpcomingEventsCard;
+
+    @FindBy(css=".evnt-events-column")
+    @CacheLookup public List<WebElement> numberPastEventsCard;
 
     @FindBy(xpath="(//li[@class=\"evnt-tab-item nav-item\"])[1]//span[last()]")
     @CacheLookup public WebElement counterUpcomingEvents;
@@ -48,16 +50,13 @@ public class EventPage extends Page{
     @FindBy(xpath="//label[@data-value=\"Canada\"]")
     @CacheLookup public WebElement canadaCheckbox;
 
-    @FindBy(css=".evnt-events-row a")
-    @CacheLookup public WebElement upcomingEventCard;
+    public int cardNumberOfUpcomingEvents(){ return numberUpcomingEventsCard.size(); }
 
-    public int cardNumberOfUpcomingEvents(){
-        return numberUpcomingEventsCard.size();
-    }
+    public int cardNumberOfPastEvents(){ return numberPastEventsCard.size(); }
 
-    public int counterNumberOfUpcomingEvents(){
-        return Integer.parseInt(counterUpcomingEvents.getText());
-    }
+    public int counterNumberOfUpcomingEvents(){ return Integer.parseInt(counterUpcomingEvents.getText()); }
+
+    public int counterNumberOfPastEvents(){ return Integer.parseInt(counterPastEvents.getText()); }
 
     public String getCardLocation(){ return cardLocation.getText(); }
 
@@ -80,8 +79,34 @@ public class EventPage extends Page{
     public int getCardSpeaker(){ return cardSpeakerList.size(); }
 
     public Date getDateFromCard() throws ParseException {
+        if (getCardEventDate().contains("-")){
+            return new SimpleDateFormat(("dd MMM yyyy")).parse(getCardEventDate()
+                    .substring(getCardEventDate().indexOf("-")+1).trim());
+        }
         return new SimpleDateFormat("dd MMM yyyy").parse(getCardEventDate());
     }
+
+    public EventPage pastEventTabClick(){
+        pastEventsTab.click();
+        return new EventPage(driver);
+    }
+
+    public EventPage locationFilterClick(){
+        filterLocation.click();
+        return new EventPage(driver);
+    }
+
+    public EventPage canadaCheckboxChoose(){
+        canadaCheckbox.click();
+        collapseWaiter.click();
+        return new EventPage(driver);
+    }
+
+    public EventCardDetailsPage eventCardOpen(){
+        eventCard.click();
+        return new EventCardDetailsPage(driver);
+    }
+
 
 
 

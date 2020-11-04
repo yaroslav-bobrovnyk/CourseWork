@@ -5,7 +5,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.exparity.hamcrest.date.DateMatchers;
 import org.exparity.hamcrest.date.Moments;
 import org.junit.After;
 import org.junit.Before;
@@ -14,22 +13,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.EventPage;
 import pages.MainPage;
+import pages.VideoCardDetailPage;
 
 
 import java.text.ParseException;
-import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.exparity.hamcrest.date.DateMatchers.after;
-
-
-
+import static org.exparity.hamcrest.date.DateMatchers.*;
 
 public class EpamEventsTest {
     static WebDriver driver;
-    private static Logger logger = LogManager.getLogger(EpamEventsTest.class);
-    private ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
+    private static final Logger logger = LogManager.getLogger(EpamEventsTest.class);
+    private final ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
     private static MainPage mainPage;
 
     @Before
@@ -63,10 +61,45 @@ public class EpamEventsTest {
         assertThat(eventPage.getCardSpeaker(),greaterThan(0));
     }
 
+    @Test
     public void upcomingEventsDateValidationTest() throws ParseException {
+        Date date=mainPage.eventPageOpen().getDateFromCard();
+        assertThat(date, after(Moments.today()));
+    }
+
+    @Test
+    public void pastEventsReviewTest() throws ParseException {
         EventPage eventPage=new EventPage(driver);
-        mainPage.eventPageOpen();
-        assertThat(eventPage.getDateFromCard(), after(Moments.today()));
+        int actualNumberOfCards=mainPage.eventPageOpen()
+                .pastEventTabClick()
+                .locationFilterClick()
+                .canadaCheckboxChoose().cardNumberOfPastEvents();
+        int numberOfCardsOnCounter=eventPage.counterNumberOfPastEvents();
+        Date date=eventPage.getDateFromCard();
+        assertThat(actualNumberOfCards ,greaterThan(0));
+        assertThat(actualNumberOfCards, equalTo(numberOfCardsOnCounter));
+        assertThat(date, before(Moments.today()));
+    }
+
+    @Test
+    public void cardDetailInformationReviewTest(){
+        boolean informationDisplayBlock =mainPage.eventPageOpen().eventCardOpen().doInformationBlockDisplay();
+        assertThat(informationDisplayBlock,equalTo(true));
+    }
+
+    @Test
+    public void categoryFilterTest() {
+        String category="Testing";
+        String location="Belarus";
+        String language="ENGLISH";
+        mainPage.videoPageOpen().categoriesChoose(category,location,language);
+        VideoCardDetailPage videoCardDetailPage=new VideoCardDetailPage(driver);
+        System.out.println(driver.getCurrentUrl());
+        Map <String,String> data=videoCardDetailPage.getData();
+        System.out.println(data.get("location"));
+        assertThat(data.get("category"),equalTo(category));
+        assertThat(data.get("location"),containsString(location));
+        assertThat(data.get("language"),equalTo(language));
     }
 
     @After

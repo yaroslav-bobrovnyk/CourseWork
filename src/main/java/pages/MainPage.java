@@ -9,10 +9,10 @@ import org.openqa.selenium.support.FindBy;
 public class MainPage extends Page{
     @FindBy(css=".events-icon .nav-link")
     @CacheLookup
-    private WebElement eventNavButton;
+    public WebElement eventNavButton;
     @FindBy(css=".talks-library-icon .nav-link")
     @CacheLookup
-    private WebElement videoBavButton;
+    public WebElement videoBavButton;
 
     public MainPage(WebDriver webDriver) {
         super(webDriver);
@@ -24,7 +24,7 @@ public class MainPage extends Page{
     }
 
     public VideoPage videoPageOpen(){
-        eventNavButton.click();
+        videoBavButton.click();
         return new VideoPage(driver);
     }
 
