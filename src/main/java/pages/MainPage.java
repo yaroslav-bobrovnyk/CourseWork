@@ -10,6 +10,7 @@ public class MainPage extends Page{
     @FindBy(css=".events-icon .nav-link")
     @CacheLookup
     public WebElement eventNavButton;
+
     @FindBy(css=".talks-library-icon .nav-link")
     @CacheLookup
     public WebElement videoBavButton;
@@ -27,5 +28,4 @@ public class MainPage extends Page{
         videoBavButton.click();
         return new VideoPage(driver);
     }
-
 }

@@ -10,16 +10,13 @@ import java.util.Map;
 
 public class VideoCardDetailPage extends Page{
     @FindBy(xpath="//label[contains(text(),\"Testing\")]")
-    @CacheLookup
-    public WebElement categoryCheck;
+    @CacheLookup public WebElement categoryCheck;
 
     @FindBy(css=".location span")
-    @CacheLookup
-    public WebElement locationCheck;
+    @CacheLookup public WebElement locationCheck;
 
     @FindBy(css=".evnt-card-table .language span")
-    @CacheLookup
-    public WebElement languageCheck;
+    @CacheLookup public WebElement languageCheck;
 
     public VideoCardDetailPage(WebDriver webDriver) {super(webDriver);}
 

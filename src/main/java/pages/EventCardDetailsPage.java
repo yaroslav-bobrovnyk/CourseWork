@@ -11,9 +11,7 @@ public class EventCardDetailsPage extends Page {
     @CacheLookup
     public WebElement informationBlock;
 
-    public EventCardDetailsPage(WebDriver webDriver) {super(webDriver);}
+    public EventCardDetailsPage(WebDriver webDriver) { super(webDriver); }
 
-    public boolean doInformationBlockDisplay(){
-        return informationBlock.isDisplayed();
-    }
+    public boolean doInformationBlockDisplay(){ return informationBlock.isDisplayed(); }
 }

@@ -10,6 +10,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.greaterThan;
+
 public class EventPage extends Page{
     @FindBy(css=".evnt-upcoming-events .evnt-card-wrapper")
     @CacheLookup public List<WebElement> numberUpcomingEventsCard;
@@ -50,7 +53,13 @@ public class EventPage extends Page{
     @FindBy(xpath="//label[@data-value=\"Canada\"]")
     @CacheLookup public WebElement canadaCheckbox;
 
-    public int cardNumberOfUpcomingEvents(){ return numberUpcomingEventsCard.size(); }
+    public EventPage(WebDriver webDriver) { super(webDriver); }
+
+    public int cardNumberOfUpcomingEvents(){
+        int actualNumberOfCards=numberUpcomingEventsCard.size();
+        assertThat(actualNumberOfCards,greaterThan(0));
+        return actualNumberOfCards;
+    }
 
     public int cardNumberOfPastEvents(){ return numberPastEventsCard.size(); }
 
@@ -98,7 +107,7 @@ public class EventPage extends Page{
 
     public EventPage canadaCheckboxChoose(){
         canadaCheckbox.click();
-        collapseWaiter.click();
+        waitForElement(globalLoader);
         return new EventPage(driver);
     }
 
@@ -106,15 +115,4 @@ public class EventPage extends Page{
         eventCard.click();
         return new EventCardDetailsPage(driver);
     }
-
-
-
-
-
-
-
-    public EventPage(WebDriver webDriver) {
-        super(webDriver);
-    }
-
 }

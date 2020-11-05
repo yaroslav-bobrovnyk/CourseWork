@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -13,8 +12,8 @@ public abstract class Page {
     @FindBy(css=".evnt-cards-container .evnt-card-wrapper")
     @CacheLookup public WebElement eventCard;
 
-    @FindBy(xpath="//div[@data-group=\"Canada\"]//div[@data-toggle=\"collapse\"]")
-    @CacheLookup public WebElement collapseWaiter;
+    @FindBy(css=".evnt-global-loader")
+    @CacheLookup public WebElement globalLoader;
 
     protected WebDriver driver;
 

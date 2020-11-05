@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class VideoPage extends Page{
     @FindBy(xpath="(//div[@data-toggle=\"collapse\"]//span)[1]")
@@ -27,12 +25,7 @@ public class VideoPage extends Page{
     @FindBy(css=".evnt-talk-name span")
     @CacheLookup public WebElement textTitle;
 
-    @FindBy(css=".evnt-global-loader")
-    @CacheLookup public WebElement globalLoader;
-
     String checkbox = "//label[@data-value=\"%s\"]";
-    String locationCheckbox = "//div[@class=\"evnt-filter-item\" and @data-group=\"%s\"]";
-    String englishLanguageCheckbox = "//label[@class=\"form-check-label\" and @data-value=\"%s\"]";
 
     public VideoPage(WebDriver webDriver) {
         super(webDriver);
@@ -51,4 +44,10 @@ public class VideoPage extends Page{
         return new VideoCardDetailPage(driver);
     }
 
+    public String keywordSearch(String keyword) {
+        searchField.click();
+        searchField.sendKeys(keyword);
+        waitForElement(globalLoader);
+        return textTitle.getText();
+    }
 }

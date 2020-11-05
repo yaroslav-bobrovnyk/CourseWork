@@ -45,7 +45,6 @@ public class EpamEventsTest {
         EventPage eventPage=new EventPage(driver);
         int actualNumberOfCards=mainPage.eventPageOpen().cardNumberOfUpcomingEvents();
         int numberOfCardsOnCounter=eventPage.counterNumberOfUpcomingEvents();
-        assertThat(actualNumberOfCards ,greaterThan(0));
         assertThat(actualNumberOfCards, equalTo(numberOfCardsOnCounter));
     }
 
@@ -64,7 +63,7 @@ public class EpamEventsTest {
     @Test
     public void upcomingEventsDateValidationTest() throws ParseException {
         Date date=mainPage.eventPageOpen().getDateFromCard();
-        assertThat(date, after(Moments.today()));
+        assertThat(date, sameOrAfter(Moments.today()));
     }
 
     @Test
@@ -100,6 +99,14 @@ public class EpamEventsTest {
         assertThat(data.get("category"),equalTo(category));
         assertThat(data.get("location"),containsString(location));
         assertThat(data.get("language"),equalTo(language));
+    }
+
+    @Test
+    public void reportSearchByKeywordTest() {
+        String keyword="QA";
+        String reportTitle=mainPage.videoPageOpen().keywordSearch(keyword);
+        assertThat(reportTitle,containsString(keyword));
+
     }
 
     @After
