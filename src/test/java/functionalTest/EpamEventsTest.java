@@ -6,14 +6,13 @@ import org.aeonbits.owner.ConfigFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.exparity.hamcrest.date.Moments;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.EventPage;
 import pages.MainPage;
-import pages.VideoCardDetailPage;
 
 
 import java.text.ParseException;
@@ -30,8 +29,10 @@ public class EpamEventsTest {
     private final ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
     private static MainPage mainPage;
 
-    @Before
+    @BeforeEach
     public void setUp() {
+//        String browser = System.getProperty("browser");
+//        logger.info(browser);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -69,15 +70,12 @@ public class EpamEventsTest {
     @Test
     public void pastEventsReviewTest() throws ParseException {
         EventPage eventPage=new EventPage(driver);
-        int actualNumberOfCards=mainPage.eventPageOpen()
-                .pastEventTabClick()
-                .locationFilterClick()
-                .canadaCheckboxChoose().cardNumberOfPastEvents();
+        int actualNumberOfCards=mainPage.eventPageOpen().cardNumberOfPastEvents();
         int numberOfCardsOnCounter=eventPage.counterNumberOfPastEvents();
-        Date date=eventPage.getDateFromCard();
+        Date eventCardDate=eventPage.getDateFromCard();
         assertThat(actualNumberOfCards ,greaterThan(0));
         assertThat(actualNumberOfCards, equalTo(numberOfCardsOnCounter));
-        assertThat(date, before(Moments.today()));
+        assertThat(eventCardDate, before(Moments.today()));
     }
 
     @Test
@@ -91,14 +89,11 @@ public class EpamEventsTest {
         String category="Testing";
         String location="Belarus";
         String language="ENGLISH";
-        mainPage.videoPageOpen().categoriesChoose(category,location,language);
-        VideoCardDetailPage videoCardDetailPage=new VideoCardDetailPage(driver);
-        System.out.println(driver.getCurrentUrl());
-        Map <String,String> data=videoCardDetailPage.getData();
-        System.out.println(data.get("location"));
-        assertThat(data.get("category"),equalTo(category));
-        assertThat(data.get("location"),containsString(location));
-        assertThat(data.get("language"),equalTo(language));
+        Map <String,String> selectedFilterData=mainPage.videoPageOpen()
+                .categoriesChoose(category,location,language).getSelectedFilterData();
+        assertThat(selectedFilterData.get("category"),equalTo(category));
+        assertThat(selectedFilterData.get("location"),containsString(location));
+        assertThat(selectedFilterData.get("language"),equalTo(language));
     }
 
     @Test
@@ -109,7 +104,7 @@ public class EpamEventsTest {
 
     }
 
-    @After
+    @AfterEach
     public void setDown() {
         if (driver != null) {
             driver.quit();

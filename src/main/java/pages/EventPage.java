@@ -61,8 +61,6 @@ public class EventPage extends Page{
         return actualNumberOfCards;
     }
 
-    public int cardNumberOfPastEvents(){ return numberPastEventsCard.size(); }
-
     public int counterNumberOfUpcomingEvents(){ return Integer.parseInt(counterUpcomingEvents.getText()); }
 
     public int counterNumberOfPastEvents(){ return Integer.parseInt(counterPastEvents.getText()); }
@@ -95,21 +93,14 @@ public class EventPage extends Page{
         return new SimpleDateFormat("dd MMM yyyy").parse(getCardEventDate());
     }
 
-    public EventPage pastEventTabClick(){
+    public int cardNumberOfPastEvents(){
         pastEventsTab.click();
-        return new EventPage(driver);
-    }
-
-    public EventPage locationFilterClick(){
         filterLocation.click();
-        return new EventPage(driver);
-    }
-
-    public EventPage canadaCheckboxChoose(){
         canadaCheckbox.click();
         waitForElement(globalLoader);
-        return new EventPage(driver);
+        return numberPastEventsCard.size();
     }
+
 
     public EventCardDetailsPage eventCardOpen(){
         eventCard.click();

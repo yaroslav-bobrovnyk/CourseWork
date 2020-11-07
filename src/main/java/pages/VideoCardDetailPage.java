@@ -20,11 +20,11 @@ public class VideoCardDetailPage extends Page{
 
     public VideoCardDetailPage(WebDriver webDriver) {super(webDriver);}
 
-    public Map<String,String> getData(){
-        Map<String,String> data=new HashMap<>();
-        data.put("category",categoryCheck.getText());
-        data.put("location",locationCheck.getText());
-        data.put("language",languageCheck.getText());
-        return data;
+    public Map<String,String> getSelectedFilterData(){
+        Map<String,String> selectedFilterData=new HashMap<>();
+        selectedFilterData.put("category",categoryCheck.getText());
+        selectedFilterData.put("location",locationCheck.getText());
+        selectedFilterData.put("language",languageCheck.getText());
+        return selectedFilterData;
     }
 }
