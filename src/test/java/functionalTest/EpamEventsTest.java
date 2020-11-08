@@ -2,6 +2,10 @@ package functionalTest;
 
 import config.ServerConfig;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -42,7 +46,11 @@ public class EpamEventsTest {
     }
 
     @Test
-    public void upcomingEventsReviewTest(){
+    @Epic("Epam Events")
+    @Feature("Mandatory test coverage")
+    @Story("Viewing Upcoming Events")
+    @Description("This test verifies that cards are displayed on Upcoming Events tab and number of cards are equal counter on Upcoming Events button")
+        public void upcomingEventsReviewTest(){
         EventPage eventPage=new EventPage(driver);
         int actualNumberOfCards=mainPage.eventPageOpen().cardNumberOfUpcomingEvents();
         int numberOfCardsOnCounter=eventPage.counterNumberOfUpcomingEvents();
@@ -50,9 +58,14 @@ public class EpamEventsTest {
     }
 
     @Test
+    @Epic("Epam Events")
+    @Feature("Mandatory test coverage")
+    @Story("Viewing Event Cards")
+    @Description("This test verifies that cards are displayed on Upcoming Events tab " +
+            "and card contains information about the event: location, language, title , date, registration information, speaker list")
     public void upcomingEventsCardReviewTest() {
         EventPage eventPage=new EventPage(driver);
-        mainPage.eventPageOpen();
+        mainPage.eventPageOpen().cardNumberOfUpcomingEvents();
         assertThat(eventPage.getCardLocation(), is(not(emptyString())));
         assertThat(eventPage.getCardLanguage(), is(not(emptyString())));
         assertThat(eventPage.getCardEventTitle(), is(not(emptyString())));
@@ -62,12 +75,22 @@ public class EpamEventsTest {
     }
 
     @Test
+    @Epic("Epam Events")
+    @Feature("The order of the displayed blocks with information in the event card")
+    @Story("Date validation of the Upcoming Events")
+    @Description("This test verifies that cards are displayed on Upcoming Events tab " +
+            "and in the This week block, the dates of the events are greater than or equal to the current date and are within the current week")
     public void upcomingEventsDateValidationTest() throws ParseException {
         Date date=mainPage.eventPageOpen().getDateFromCard();
         assertThat(date, sameOrAfter(Moments.today()));
     }
 
     @Test
+    @Epic("Epam Events")
+    @Feature("The order of the displayed blocks with information in the event card")
+    @Story("Viewing Past Events in Canada")
+    @Description("This test verifies that cards are displayed on Past Events tab " +
+            "and the dates of the events are less than the current date")
     public void pastEventsReviewTest() throws ParseException {
         EventPage eventPage=new EventPage(driver);
         int actualNumberOfCards=mainPage.eventPageOpen().cardNumberOfPastEvents();
@@ -79,12 +102,21 @@ public class EpamEventsTest {
     }
 
     @Test
+    @Epic("Epam Events")
+    @Feature("The order of the displayed blocks with information in the event card")
+    @Story("Viewing detailed information about the event")
+    @Description("This test verifies that cards are displayed on Upcoming Events tab " +
+            "and on the page with information about the event, a block with a button for registration, date and time, event program is displayed")
     public void cardDetailInformationReviewTest(){
-        boolean informationDisplayBlock =mainPage.eventPageOpen().eventCardOpen().doInformationBlockDisplay();
+        boolean informationDisplayBlock =mainPage.eventPageOpen().eventCardOpen().doesInformationBlockDisplay();
         assertThat(informationDisplayBlock,equalTo(true));
     }
 
     @Test
+    @Epic("Epam Events")
+    @Feature("The order of the displayed blocks with information in the event card")
+    @Story("Filtering reports by category")
+    @Description("The page displays cards that match the rules of the selected filters")
     public void categoryFilterTest() {
         String category="Testing";
         String location="Belarus";
@@ -97,6 +129,10 @@ public class EpamEventsTest {
     }
 
     @Test
+    @Epic("Epam Events")
+    @Feature("The order of the displayed blocks with information in the event card")
+    @Story("Speech search by keyword")
+    @Description("The page displays reports containing the search keyword in the title")
     public void reportSearchByKeywordTest() {
         String keyword="QA";
         String reportTitle=mainPage.videoPageOpen().keywordSearch(keyword);

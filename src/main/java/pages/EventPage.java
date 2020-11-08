@@ -1,10 +1,15 @@
 package pages;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.ByteArrayInputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -55,53 +60,69 @@ public class EventPage extends Page{
 
     public EventPage(WebDriver webDriver) { super(webDriver); }
 
+    @Step("Get the card number value of Upcoming Events")
     public int cardNumberOfUpcomingEvents(){
         int actualNumberOfCards=numberUpcomingEventsCard.size();
         assertThat(actualNumberOfCards,greaterThan(0));
+        Allure.addAttachment("Upcoming Events cards on Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return actualNumberOfCards;
     }
 
+    @Step("Get the number from the Upcoming Events counter")
     public int counterNumberOfUpcomingEvents(){ return Integer.parseInt(counterUpcomingEvents.getText()); }
 
+    @Step("Get the number from the Past Events counter")
     public int counterNumberOfPastEvents(){ return Integer.parseInt(counterPastEvents.getText()); }
 
-    public String getCardLocation(){ return cardLocation.getText(); }
+    @Step("Get the location of the event from the card")
+    public String getCardLocation(){
+        Allure.addAttachment("Card information about Event", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+        return cardLocation.getText(); }
 
+    @Step("Get the language of the event from the card")
     public String getCardLanguage(){
         return cardLanguage.getText();
     }
 
+    @Step("Get the title of the event from the card")
     public String getCardEventTitle(){
         return cardEventTitle.getText();
     }
 
+    @Step("Get the date of the event from the card")
     public String getCardEventDate(){
         return cardEventDate.getText();
     }
 
+    @Step("Get the status of the event from the card")
     public String getEventStatus(){
         return cardEventStatus.getText();
     }
-    
+
+    @Step("Get the speaker list of the event from the card")
     public int getCardSpeaker(){ return cardSpeakerList.size(); }
 
+    @Step("Get the date from the event card")
     public Date getDateFromCard() throws ParseException {
         if (getCardEventDate().contains("-")){
             return new SimpleDateFormat(("dd MMM yyyy")).parse(getCardEventDate()
                     .substring(getCardEventDate().indexOf("-")+1).trim());
         }
+        Allure.addAttachment("Date from the event card", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return new SimpleDateFormat("dd MMM yyyy").parse(getCardEventDate());
     }
 
+    @Step("Get the card number value of Past Events")
     public int cardNumberOfPastEvents(){
         pastEventsTab.click();
         filterLocation.click();
         canadaCheckbox.click();
         waitForElement(globalLoader);
+        Allure.addAttachment("Past Events cards on Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return numberPastEventsCard.size();
     }
 
-
+    @Step("Open Event Card details page")
     public EventCardDetailsPage eventCardOpen(){
         eventCard.click();
         return new EventCardDetailsPage(driver);
