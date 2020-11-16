@@ -6,19 +6,27 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import jdk.nashorn.internal.ir.annotations.Ignore;
+import lombok.SneakyThrows;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.exparity.hamcrest.date.Moments;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.EventPage;
 import pages.MainPage;
 
 
+import java.net.URL;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.Map;
@@ -28,18 +36,29 @@ import static org.hamcrest.Matchers.*;
 import static org.exparity.hamcrest.date.DateMatchers.*;
 
 public class EpamEventsTest {
-    static WebDriver driver;
+    WebDriver driver;
     private static final Logger logger = LogManager.getLogger(EpamEventsTest.class);
     private final ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
     private static MainPage mainPage;
 
+    @SneakyThrows
     @BeforeEach
     public void setUp() {
 //        String browser = System.getProperty("browser");
 //        logger.info(browser);
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+        String slenoidURL = "http://localhost:4444/wd/hub";
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
+        caps.setVersion("85.0");
+        caps.setCapability("enableVNC", true);
+        caps.setCapability("screenResolution", "1280x1024");
+        caps.setCapability("enableVideo", true);
+        caps.setCapability("enableLog", true);
+
+        driver = new RemoteWebDriver(new URL(slenoidURL), caps);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         mainPage=new MainPage(driver);
         driver.get(cfg.url());

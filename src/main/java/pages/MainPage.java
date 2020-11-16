@@ -13,7 +13,7 @@ import java.io.ByteArrayInputStream;
 
 
 public class MainPage extends Page{
-    @FindBy(css=".events-icon .nav-link")
+    @FindBy(css=".nav-item.events-icon")
     @CacheLookup
     public WebElement eventNavButton;
 
