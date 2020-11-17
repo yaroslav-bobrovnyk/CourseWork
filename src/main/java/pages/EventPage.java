@@ -115,7 +115,9 @@ public class EventPage extends Page{
     @Step("Get the card number value of Past Events")
     public int cardNumberOfPastEvents(){
         pastEventsTab.click();
+        waitForElement(globalLoader);
         filterLocation.click();
+        waitForElement(globalLoader);
         canadaCheckbox.click();
         waitForElement(globalLoader);
         Allure.addAttachment("Past Events cards on Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
@@ -124,6 +126,9 @@ public class EventPage extends Page{
 
     @Step("Open Event Card details page")
     public EventCardDetailsPage eventCardOpen(){
+        if (globalLoader.isEnabled()){
+            waitForElement(globalLoader);
+        }
         eventCard.click();
         return new EventCardDetailsPage(driver);
     }

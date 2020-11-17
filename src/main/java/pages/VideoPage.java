@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import java.io.ByteArrayInputStream;
 
 public class VideoPage extends Page{
-    @FindBy(xpath="(//div[@data-toggle=\"collapse\"]//span)[1]")
+    @FindBy(css=".show-more")
     @CacheLookup public WebElement moreFilterButton;
 
     @FindBy(id="filter_category")
@@ -35,9 +35,11 @@ public class VideoPage extends Page{
 
     @Step("Selecting categories in the filter")
     public VideoCardDetailPage categoriesChoose(String category, String location, String language) {
+        globalLoaderWait();
         moreFilterButton.click();
         categoryFilter.click();
         driver.findElement(By.xpath(String.format(checkbox,category))).click();
+        waitForElement(globalLoader);
         locationFilter.click();
         driver.findElement(By.xpath(String.format(checkbox,location))).click();
         waitForElement(globalLoader);
@@ -51,6 +53,7 @@ public class VideoPage extends Page{
 
     @Step("Enters a keyword into the search box")
     public String keywordSearch(String keyword) {
+        //globalLoaderWait();
         searchField.click();
         searchField.sendKeys(keyword);
         waitForElement(globalLoader);

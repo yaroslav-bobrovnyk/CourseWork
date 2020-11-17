@@ -1,6 +1,7 @@
 package functionalTest;
 
 import config.ServerConfig;
+import factory.WebFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -37,28 +38,17 @@ import static org.exparity.hamcrest.date.DateMatchers.*;
 
 public class EpamEventsTest {
     WebDriver driver;
-    private static final Logger logger = LogManager.getLogger(EpamEventsTest.class);
     private final ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
     private static MainPage mainPage;
 
     @SneakyThrows
     @BeforeEach
     public void setUp() {
-//        String browser = System.getProperty("browser");
-//        logger.info(browser);
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-        String slenoidURL = "http://localhost:4444/wd/hub";
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setBrowserName("chrome");
-        caps.setVersion("85.0");
-        caps.setCapability("enableVNC", true);
-        caps.setCapability("screenResolution", "1280x1024");
-        caps.setCapability("enableVideo", true);
-        caps.setCapability("enableLog", true);
-
-        driver = new RemoteWebDriver(new URL(slenoidURL), caps);
+        String browser = System.getProperty("browser");
+        if (browser==null){
+            browser="chrome";
+        }
+        driver=WebFactory.create(WebFactory.Browsers.valueOf(browser.toUpperCase()));
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         mainPage=new MainPage(driver);
         driver.get(cfg.url());

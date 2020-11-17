@@ -28,3 +28,87 @@
 2020-11-07 11:42:15,267 INFO f.EpamEventsTest [main] chrome
 2020-11-07 11:42:25,644 INFO f.EpamEventsTest [main] chrome
 2020-11-07 11:42:37,582 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:09,849 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:09,992 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:09,999 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:10,007 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:10,017 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:10,028 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:10,039 INFO f.EpamEventsTest [main] null
+2020-11-16 19:58:42,410 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:42,542 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:42,550 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:42,557 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:42,568 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:42,577 INFO f.EpamEventsTest [main] chrome
+2020-11-16 19:58:42,583 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,823 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,953 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,961 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,968 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,977 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,986 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:02:18,994 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:30,215 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:31,125 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:31,143 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:31,161 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:31,177 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:31,194 INFO f.EpamEventsTest [main] chrome
+2020-11-16 20:07:31,212 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:57:32,624 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:57:46,427 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:57:54,296 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:58:02,853 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:58:13,095 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:58:20,205 INFO f.EpamEventsTest [main] chrome
+2020-11-17 23:58:28,934 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:25,817 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:26,619 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:26,641 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:26,668 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:26,691 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:26,717 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:01:26,741 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:02:18,876 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:02:30,034 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:02:37,093 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:02:46,094 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:02:58,266 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:03:07,299 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:03:19,790 INFO f.EpamEventsTest [main] chrome
+2020-11-18 00:25:24,471 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:25:36,084 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:25:48,072 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:25:57,890 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:26:07,723 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:26:17,133 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:26:26,297 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:31:32,573 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:31:43,354 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:31:53,441 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:32:03,533 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:32:13,353 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:32:23,548 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:32:34,383 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:01,266 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:11,391 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:20,117 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:28,395 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:36,788 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:44,024 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:34:53,324 INFO f.EpamEventsTest [main] opera
+2020-11-18 00:52:58,474 INFO p.Page [main] There is no global loader
+2020-11-18 00:59:14,030 INFO p.Page [main] There is no global loader
+2020-11-18 00:59:23,432 INFO p.Page [main] There is no global loader
+2020-11-18 01:26:22,541 INFO p.Page [main] There is no global loader
+2020-11-18 01:28:08,772 INFO p.Page [main] There is no global loader
+2020-11-18 01:28:46,302 INFO p.Page [main] There is no global loader
+2020-11-18 01:31:39,210 INFO p.Page [main] There is no global loader
+2020-11-18 01:35:07,130 INFO p.Page [main] There is no global loader
+2020-11-18 01:35:19,804 INFO p.Page [main] There is no global loader
+2020-11-18 01:35:28,078 INFO p.Page [main] There is no global loader
+2020-11-18 01:41:02,150 INFO p.Page [main] There is no global loader
+2020-11-18 01:41:29,475 INFO p.Page [main] There is no global loader
+2020-11-18 01:41:48,450 INFO p.Page [main] There is no global loader
+2020-11-18 01:46:05,405 INFO p.Page [main] There is no global loader
