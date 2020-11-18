@@ -23,26 +23,29 @@ public class WebFactory {
     public static WebDriver create(Browsers browsers){
         String slenoidURL = "http://localhost:4444/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
-                caps.setVersion("85.0");
         switch (browsers){
             case CHROME: {
                 caps.setBrowserName("chrome");
                 caps.setVersion("85.0");
+                logger.info("Chrome docker image was successfully up");
                 break;
             }
             case OPERA: {
                 caps.setBrowserName("opera");
                 caps.setVersion("70.0");
+                logger.info("Opera docker image was successfully up");
                 break;
             }
             case FIREFOX: {
                 caps.setBrowserName("firefox");
                 caps.setVersion("82.0");
+                logger.info("Firefox docker image was successfully up");
                 break;
             }
             default:{
                 caps.setBrowserName("chrome");
                 caps.setVersion("85.0");
+                logger.info("Chrome docker image was successfully up");
             }
         }
         caps.setCapability("enableVNC", true);

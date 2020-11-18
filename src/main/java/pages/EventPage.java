@@ -2,6 +2,8 @@ package pages;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -58,49 +60,67 @@ public class EventPage extends Page{
     @FindBy(xpath="//label[@data-value=\"Canada\"]")
     @CacheLookup public WebElement canadaCheckbox;
 
+    private static Logger logger = LogManager.getLogger(EventPage.class);
+
     public EventPage(WebDriver webDriver) { super(webDriver); }
 
     @Step("Get the card number value of Upcoming Events")
     public int cardNumberOfUpcomingEvents(){
         int actualNumberOfCards=numberUpcomingEventsCard.size();
+        logger.info("Get actual number of cards on the page");
         assertThat(actualNumberOfCards,greaterThan(0));
+        logger.info("Assert that page displays cards for upcoming events");
         Allure.addAttachment("Upcoming Events cards on Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return actualNumberOfCards;
     }
 
     @Step("Get the number from the Upcoming Events counter")
-    public int counterNumberOfUpcomingEvents(){ return Integer.parseInt(counterUpcomingEvents.getText()); }
+    public int counterNumberOfUpcomingEvents(){
+        logger.info("Return the number of card from the counter");
+        return Integer.parseInt(counterUpcomingEvents.getText());
+    }
 
     @Step("Get the number from the Past Events counter")
-    public int counterNumberOfPastEvents(){ return Integer.parseInt(counterPastEvents.getText()); }
+    public int counterNumberOfPastEvents(){
+        logger.info("Return the number of card from the counter");
+        return Integer.parseInt(counterPastEvents.getText());
+    }
 
     @Step("Get the location of the event from the card")
     public String getCardLocation(){
+        logger.info("Get card location");
         Allure.addAttachment("Card information about Event", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return cardLocation.getText(); }
 
     @Step("Get the language of the event from the card")
     public String getCardLanguage(){
+        logger.info("Get card language");
         return cardLanguage.getText();
     }
 
     @Step("Get the title of the event from the card")
     public String getCardEventTitle(){
+        logger.info("Get card event title");
         return cardEventTitle.getText();
     }
 
     @Step("Get the date of the event from the card")
     public String getCardEventDate(){
+        logger.info("Get card event date");
         return cardEventDate.getText();
     }
 
     @Step("Get the status of the event from the card")
     public String getEventStatus(){
+        logger.info("Get card event status");
         return cardEventStatus.getText();
     }
 
     @Step("Get the speaker list of the event from the card")
-    public int getCardSpeaker(){ return cardSpeakerList.size(); }
+    public int getCardSpeaker(){
+        logger.info("Get card number of speakers");
+        return cardSpeakerList.size();
+    }
 
     @Step("Get the date from the event card")
     public Date getDateFromCard() throws ParseException {
@@ -108,6 +128,7 @@ public class EventPage extends Page{
             return new SimpleDateFormat(("dd MMM yyyy")).parse(getCardEventDate()
                     .substring(getCardEventDate().indexOf("-")+1).trim());
         }
+        logger.info("Get the date from the event card");
         Allure.addAttachment("Date from the event card", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return new SimpleDateFormat("dd MMM yyyy").parse(getCardEventDate());
     }
@@ -116,11 +137,15 @@ public class EventPage extends Page{
     public int cardNumberOfPastEvents(){
         pastEventsTab.click();
         waitForElement(globalLoader);
+        logger.info("Click on the Past Event tab");
         filterLocation.click();
         waitForElement(globalLoader);
+        logger.info("Click on the location filter");
         canadaCheckbox.click();
         waitForElement(globalLoader);
+        logger.info("Click on the Canada checkbox");
         Allure.addAttachment("Past Events cards on Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+        logger.info("Return the card number value of Past Events");
         return numberPastEventsCard.size();
     }
 
@@ -130,6 +155,7 @@ public class EventPage extends Page{
             waitForElement(globalLoader);
         }
         eventCard.click();
+        logger.info("Click on the Event Card");
         return new EventCardDetailsPage(driver);
     }
 }

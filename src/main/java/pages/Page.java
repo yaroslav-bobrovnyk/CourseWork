@@ -1,6 +1,5 @@
 package pages;
 
-import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
@@ -21,7 +20,7 @@ public abstract class Page {
     @CacheLookup public WebElement globalLoader;
 
     protected WebDriver driver;
-    protected static final Logger logger = LogManager.getLogger(Page.class);
+    private static final Logger logger = LogManager.getLogger(Page.class);
 
 
     public Page(WebDriver driver) {
@@ -40,7 +39,7 @@ public abstract class Page {
                 waitForElement(globalLoader);
             }
         }catch (StaleElementReferenceException | NoSuchElementException exception){
-            logger.info("There is no global loader");
+            logger.error("There is no global loader");
         }
     }
 

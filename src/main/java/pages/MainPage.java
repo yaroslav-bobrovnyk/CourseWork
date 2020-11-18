@@ -2,6 +2,8 @@ package pages;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +20,8 @@ public class MainPage extends Page{
     @CacheLookup
     public WebElement videoBavButton;
 
+    private static Logger logger = LogManager.getLogger(MainPage.class);
+
     public MainPage(WebDriver webDriver) {
         super(webDriver);
     }
@@ -26,6 +30,7 @@ public class MainPage extends Page{
     public EventPage eventPageOpen(){
         globalLoaderWait();
         eventNavButton.click();
+        logger.info("Event page is opened");
         waitForElement(globalLoader);
         Allure.addAttachment("Epam Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return new EventPage(driver);
@@ -35,6 +40,7 @@ public class MainPage extends Page{
     public VideoPage videoPageOpen(){
         globalLoaderWait();
         videoBavButton.click();
+        logger.info("Video page is opened");
         waitForElement(globalLoader);
         Allure.addAttachment("Epam Video page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return new VideoPage(driver);

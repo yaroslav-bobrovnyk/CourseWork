@@ -25,6 +25,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.EventPage;
 import pages.MainPage;
+import pages.Page;
 
 
 import java.net.URL;
@@ -39,6 +40,7 @@ import static org.exparity.hamcrest.date.DateMatchers.*;
 public class EpamEventsTest {
     WebDriver driver;
     private final ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
+    private static final Logger logger = LogManager.getLogger(EpamEventsTest.class);
     private static MainPage mainPage;
 
     @SneakyThrows
@@ -52,6 +54,7 @@ public class EpamEventsTest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         mainPage=new MainPage(driver);
         driver.get(cfg.url());
+        logger.info("Events EPAM application was opened");
     }
 
     @Test
@@ -64,6 +67,7 @@ public class EpamEventsTest {
         int actualNumberOfCards=mainPage.eventPageOpen().cardNumberOfUpcomingEvents();
         int numberOfCardsOnCounter=eventPage.counterNumberOfUpcomingEvents();
         assertThat(actualNumberOfCards, equalTo(numberOfCardsOnCounter));
+        logger.info("Number of cards are equal number on counter");
     }
 
     @Test
@@ -76,11 +80,17 @@ public class EpamEventsTest {
         EventPage eventPage=new EventPage(driver);
         mainPage.eventPageOpen().cardNumberOfUpcomingEvents();
         assertThat(eventPage.getCardLocation(), is(not(emptyString())));
+        logger.info("Card contains information about the location");
         assertThat(eventPage.getCardLanguage(), is(not(emptyString())));
+        logger.info("Card contains information about the language");
         assertThat(eventPage.getCardEventTitle(), is(not(emptyString())));
+        logger.info("Card contains information about the event title");
         assertThat(eventPage.getCardEventDate(), is(not(emptyString())));
+        logger.info("Card contains information about the event date");
         assertThat(eventPage.getEventStatus(), is(not(emptyString())));
+        logger.info("Card contains information about the event status");
         assertThat(eventPage.getCardSpeaker(),greaterThan(0));
+        logger.info("Card contains information about the speakers");
     }
 
     @Test
@@ -92,6 +102,7 @@ public class EpamEventsTest {
     public void upcomingEventsDateValidationTest() throws ParseException {
         Date date=mainPage.eventPageOpen().getDateFromCard();
         assertThat(date, sameOrAfter(Moments.today()));
+        logger.info("Dates of the events are greater than or equal to the current date and are within the current week");
     }
 
     @Test
@@ -106,8 +117,11 @@ public class EpamEventsTest {
         int numberOfCardsOnCounter=eventPage.counterNumberOfPastEvents();
         Date eventCardDate=eventPage.getDateFromCard();
         assertThat(actualNumberOfCards ,greaterThan(0));
+        logger.info("Cards are displayed on Past Events tab");
         assertThat(actualNumberOfCards, equalTo(numberOfCardsOnCounter));
+        logger.info("Cards are equals number on counter");
         assertThat(eventCardDate, before(Moments.today()));
+        logger.info("Dates of the events are less than the current date");
     }
 
     @Test
@@ -119,6 +133,7 @@ public class EpamEventsTest {
     public void cardDetailInformationReviewTest(){
         boolean informationDisplayBlock =mainPage.eventPageOpen().eventCardOpen().doesInformationBlockDisplay();
         assertThat(informationDisplayBlock,equalTo(true));
+        logger.info("Information block is displayed");
     }
 
     @Test
@@ -133,8 +148,11 @@ public class EpamEventsTest {
         Map <String,String> selectedFilterData=mainPage.videoPageOpen()
                 .categoriesChoose(category,location,language).getSelectedFilterData();
         assertThat(selectedFilterData.get("category"),equalTo(category));
+        logger.info("Cards match the rules of the category filter");
         assertThat(selectedFilterData.get("location"),containsString(location));
+        logger.info("Cards match the rules of the location filter");
         assertThat(selectedFilterData.get("language"),equalTo(language));
+        logger.info("Cards match the rules of the language filter");
     }
 
     @Test
@@ -146,7 +164,7 @@ public class EpamEventsTest {
         String keyword="QA";
         String reportTitle=mainPage.videoPageOpen().keywordSearch(keyword);
         assertThat(reportTitle,containsString(keyword));
-
+        logger.info("Cards contain the search keyword in the title");
     }
 
     @AfterEach

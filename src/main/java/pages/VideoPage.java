@@ -2,6 +2,8 @@ package pages;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +31,8 @@ public class VideoPage extends Page{
 
     String checkbox = "//label[@data-value=\"%s\"]";
 
+    private static Logger logger = LogManager.getLogger(VideoPage.class);
+
     public VideoPage(WebDriver webDriver) {
         super(webDriver);
     }
@@ -37,25 +41,30 @@ public class VideoPage extends Page{
     public VideoCardDetailPage categoriesChoose(String category, String location, String language) {
         globalLoaderWait();
         moreFilterButton.click();
+        logger.info("Click on more filter button");
         categoryFilter.click();
+        logger.info("Click on more category filter button");
         driver.findElement(By.xpath(String.format(checkbox,category))).click();
         waitForElement(globalLoader);
         locationFilter.click();
+        logger.info("Click on more location filter button");
         driver.findElement(By.xpath(String.format(checkbox,location))).click();
         waitForElement(globalLoader);
         languageFilter.click();
+        logger.info("Click on more language filter button");
         driver.findElement(By.xpath(String.format(checkbox,language))).click();
         waitForElement(globalLoader);
         Allure.addAttachment("Chosen categories on the Video page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         eventCard.click();
+        logger.info("Open the event card");
         return new VideoCardDetailPage(driver);
     }
 
     @Step("Enters a keyword into the search box")
     public String keywordSearch(String keyword) {
-        //globalLoaderWait();
         searchField.click();
         searchField.sendKeys(keyword);
+        logger.info("Write 'QA' value to the search field");
         waitForElement(globalLoader);
         Allure.addAttachment("Speech search by keyword", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return textTitle.getText();

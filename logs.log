@@ -112,3 +112,155 @@
 2020-11-18 01:41:29,475 INFO p.Page [main] There is no global loader
 2020-11-18 01:41:48,450 INFO p.Page [main] There is no global loader
 2020-11-18 01:46:05,405 INFO p.Page [main] There is no global loader
+2020-11-18 01:55:33,414 INFO p.Page [ForkJoinPool-1-worker-31] There is no global loader
+2020-11-18 01:55:38,402 INFO p.Page [ForkJoinPool-1-worker-23] There is no global loader
+2020-11-18 01:55:43,430 INFO p.Page [ForkJoinPool-1-worker-27] There is no global loader
+2020-11-18 01:55:48,437 INFO p.Page [ForkJoinPool-1-worker-19] There is no global loader
+2020-11-18 01:55:53,499 INFO p.Page [ForkJoinPool-1-worker-5] There is no global loader
+2020-11-18 01:56:07,014 INFO p.Page [ForkJoinPool-1-worker-9] There is no global loader
+2020-11-18 01:56:12,046 INFO p.Page [ForkJoinPool-1-worker-13] There is no global loader
+2020-11-18 02:35:58,474 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:03,048 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:05,094 INFO p.Page [main] Video page is opened
+2020-11-18 02:36:06,645 INFO p.Page [main] Write 'QA' value to the search field
+2020-11-18 02:36:08,088 INFO p.Page [main] Cards contain the search keyword in the title
+2020-11-18 02:36:08,287 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:12,111 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:13,734 INFO p.Page [main] Event page is opened
+2020-11-18 02:36:14,406 INFO p.Page [main] Get card event date
+2020-11-18 02:36:14,804 INFO p.Page [main] Get the date from the event card
+2020-11-18 02:36:15,163 INFO p.Page [main] Get card event date
+2020-11-18 02:36:15,190 INFO p.Page [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-18 02:36:15,277 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:19,466 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:21,093 INFO p.Page [main] Event page is opened
+2020-11-18 02:36:22,182 INFO p.Page [main] Get actual number of cards on the page
+2020-11-18 02:36:22,186 INFO p.Page [main] Assert that page displays cards for upcoming events
+2020-11-18 02:36:22,566 INFO p.Page [main] Get card location
+2020-11-18 02:36:22,984 INFO p.Page [main] Card contains information about the location
+2020-11-18 02:36:22,984 INFO p.Page [main] Get card language
+2020-11-18 02:36:23,047 INFO p.Page [main] Card contains information about the language
+2020-11-18 02:36:23,047 INFO p.Page [main] Get card event title
+2020-11-18 02:36:23,118 INFO p.Page [main] Card contains information about the event title
+2020-11-18 02:36:23,119 INFO p.Page [main] Get card event date
+2020-11-18 02:36:23,191 INFO p.Page [main] Card contains information about the event date
+2020-11-18 02:36:23,191 INFO p.Page [main] Get card event status
+2020-11-18 02:36:23,277 INFO p.Page [main] Card contains information about the event status
+2020-11-18 02:36:23,277 INFO p.Page [main] Get card number of speakers
+2020-11-18 02:36:23,329 INFO p.Page [main] Card contains information about the speakers
+2020-11-18 02:36:23,415 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:27,702 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:27,980 INFO p.Page [main] There is no global loader
+2020-11-18 02:36:29,342 INFO p.Page [main] Event page is opened
+2020-11-18 02:36:32,423 INFO p.Page [main] Click on the Event Card
+2020-11-18 02:36:33,676 INFO p.Page [main] Check if information block is displayed
+2020-11-18 02:36:33,738 INFO p.Page [main] Information block is displayed
+2020-11-18 02:36:33,813 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:37,965 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:38,290 INFO p.Page [main] There is no global loader
+2020-11-18 02:36:39,604 INFO p.Page [main] Event page is opened
+2020-11-18 02:36:40,717 INFO p.Page [main] Get actual number of cards on the page
+2020-11-18 02:36:40,717 INFO p.Page [main] Assert that page displays cards for upcoming events
+2020-11-18 02:36:41,125 INFO p.Page [main] Return the number of card from the counter
+2020-11-18 02:36:41,188 INFO p.Page [main] Number of cards are equal number on counter
+2020-11-18 02:36:41,260 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:45,412 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:46,994 INFO p.Page [main] Event page is opened
+2020-11-18 02:36:48,934 INFO p.Page [main] Click on the Past Event tab
+2020-11-18 02:36:49,169 INFO p.Page [main] Click on the location filter
+2020-11-18 02:36:49,430 INFO p.Page [main] Click on the Canada checkbox
+2020-11-18 02:36:49,992 INFO p.Page [main] Return the card number value of Past Events
+2020-11-18 02:36:50,021 INFO p.Page [main] Return the number of card from the counter
+2020-11-18 02:36:50,092 INFO p.Page [main] Get card event date
+2020-11-18 02:36:50,146 INFO p.Page [main] Get card event date
+2020-11-18 02:36:50,172 INFO p.Page [main] Get card event date
+2020-11-18 02:36:50,195 INFO p.Page [main] Cards are displayed on Past Events tab
+2020-11-18 02:36:50,195 INFO p.Page [main] Cards are equals number on counter
+2020-11-18 02:36:50,196 INFO p.Page [main] Dates of the events are less than the current date
+2020-11-18 02:36:50,291 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:36:54,543 INFO p.Page [main] Events EPAM application was opened
+2020-11-18 02:36:54,774 INFO p.Page [main] There is no global loader
+2020-11-18 02:36:56,310 INFO p.Page [main] Video page is opened
+2020-11-18 02:36:57,929 INFO p.Page [main] Click on more filter button
+2020-11-18 02:36:58,384 INFO p.Page [main] Click on more category filter button
+2020-11-18 02:36:59,515 INFO p.Page [main] Click on more location filter button
+2020-11-18 02:37:00,453 INFO p.Page [main] Click on more language filter button
+2020-11-18 02:37:02,793 INFO p.Page [main] Open the event card
+2020-11-18 02:37:03,164 INFO p.Page [main] Get the category text
+2020-11-18 02:37:03,288 INFO p.Page [main] Get the location text
+2020-11-18 02:37:03,376 INFO p.Page [main] Get the language text
+2020-11-18 02:37:03,959 INFO p.Page [main] Return the list from the filter
+2020-11-18 02:37:03,960 INFO p.Page [main] Cards match the rules of the category filter
+2020-11-18 02:37:03,960 INFO p.Page [main] Cards match the rules of the location filter
+2020-11-18 02:37:03,960 INFO p.Page [main] Cards match the rules of the language filter
+2020-11-18 02:41:29,647 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:41:34,528 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:41:36,110 INFO p.MainPage [main] Video page is opened
+2020-11-18 02:41:37,606 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-18 02:41:39,077 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-18 02:41:39,269 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:41:43,220 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:41:44,792 INFO p.MainPage [main] Event page is opened
+2020-11-18 02:41:45,673 INFO p.EventPage [main] Get card event date
+2020-11-18 02:41:46,071 INFO p.EventPage [main] Get the date from the event card
+2020-11-18 02:41:46,422 INFO p.EventPage [main] Get card event date
+2020-11-18 02:41:46,448 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-18 02:41:46,549 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:41:50,367 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:41:51,882 INFO p.MainPage [main] Event page is opened
+2020-11-18 02:41:52,977 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-18 02:41:52,980 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-18 02:41:53,385 INFO p.EventPage [main] Get card location
+2020-11-18 02:41:53,831 INFO f.EpamEventsTest [main] Card contains information about the location
+2020-11-18 02:41:53,831 INFO p.EventPage [main] Get card language
+2020-11-18 02:41:53,893 INFO f.EpamEventsTest [main] Card contains information about the language
+2020-11-18 02:41:53,893 INFO p.EventPage [main] Get card event title
+2020-11-18 02:41:53,951 INFO f.EpamEventsTest [main] Card contains information about the event title
+2020-11-18 02:41:53,951 INFO p.EventPage [main] Get card event date
+2020-11-18 02:41:54,012 INFO f.EpamEventsTest [main] Card contains information about the event date
+2020-11-18 02:41:54,013 INFO p.EventPage [main] Get card event status
+2020-11-18 02:41:54,079 INFO f.EpamEventsTest [main] Card contains information about the event status
+2020-11-18 02:41:54,080 INFO p.EventPage [main] Get card number of speakers
+2020-11-18 02:41:54,108 INFO f.EpamEventsTest [main] Card contains information about the speakers
+2020-11-18 02:41:54,202 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:41:58,245 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:42:00,254 INFO p.MainPage [main] Event page is opened
+2020-11-18 02:42:03,270 INFO p.EventPage [main] Click on the Event Card
+2020-11-18 02:42:04,487 INFO p.EventCardDetailsPage [main] Check if information block is displayed
+2020-11-18 02:42:04,545 INFO f.EpamEventsTest [main] Information block is displayed
+2020-11-18 02:42:04,626 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:42:08,623 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:42:10,295 INFO p.MainPage [main] Event page is opened
+2020-11-18 02:42:11,384 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-18 02:42:11,384 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-18 02:42:11,776 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-18 02:42:11,837 INFO f.EpamEventsTest [main] Number of cards are equal number on counter
+2020-11-18 02:42:11,905 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:42:15,802 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:42:18,059 INFO p.MainPage [main] Event page is opened
+2020-11-18 02:42:19,733 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-18 02:42:19,943 INFO p.EventPage [main] Click on the location filter
+2020-11-18 02:42:20,180 INFO p.EventPage [main] Click on the Canada checkbox
+2020-11-18 02:42:20,762 INFO p.EventPage [main] Return the card number value of Past Events
+2020-11-18 02:42:20,787 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-18 02:42:20,857 INFO p.EventPage [main] Get card event date
+2020-11-18 02:42:20,917 INFO p.EventPage [main] Get card event date
+2020-11-18 02:42:20,946 INFO p.EventPage [main] Get card event date
+2020-11-18 02:42:20,971 INFO f.EpamEventsTest [main] Cards are displayed on Past Events tab
+2020-11-18 02:42:20,972 INFO f.EpamEventsTest [main] Cards are equals number on counter
+2020-11-18 02:42:20,974 INFO f.EpamEventsTest [main] Dates of the events are less than the current date
+2020-11-18 02:42:21,054 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-18 02:42:24,985 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-18 02:42:26,893 INFO p.MainPage [main] Video page is opened
+2020-11-18 02:42:28,509 INFO p.VideoPage [main] Click on more filter button
+2020-11-18 02:42:28,846 INFO p.VideoPage [main] Click on more category filter button
+2020-11-18 02:42:29,806 INFO p.VideoPage [main] Click on more location filter button
+2020-11-18 02:42:30,651 INFO p.VideoPage [main] Click on more language filter button
+2020-11-18 02:42:32,764 INFO p.VideoPage [main] Open the event card
+2020-11-18 02:42:33,239 INFO p.VideoCardDetailPage [main] Get the category text
+2020-11-18 02:42:33,343 INFO p.VideoCardDetailPage [main] Get the location text
+2020-11-18 02:42:33,422 INFO p.VideoCardDetailPage [main] Get the language text
+2020-11-18 02:42:33,922 INFO p.VideoCardDetailPage [main] Return the list from the filter
+2020-11-18 02:42:33,922 INFO f.EpamEventsTest [main] Cards match the rules of the category filter
+2020-11-18 02:42:33,922 INFO f.EpamEventsTest [main] Cards match the rules of the location filter
+2020-11-18 02:42:33,922 INFO f.EpamEventsTest [main] Cards match the rules of the language filter
