@@ -121,6 +121,7 @@
             <artifactId>allure-junit5</artifactId>
             <version>${allure.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>

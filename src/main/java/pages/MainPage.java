@@ -31,7 +31,7 @@ public class MainPage extends Page{
         globalLoaderWait();
         eventNavButton.click();
         logger.info("Event page is opened");
-        waitForElement(globalLoader);
+        globalLoaderWait();
         Allure.addAttachment("Epam Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return new EventPage(driver);
     }

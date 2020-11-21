@@ -19,6 +19,9 @@ public abstract class Page {
     @FindBy(css=".evnt-global-loader")
     @CacheLookup public WebElement globalLoader;
 
+    @FindBy(css="button#onetrust-accept-btn-handler")
+    @CacheLookup public WebElement oneTrustAcceptButton;
+
     protected WebDriver driver;
     private static final Logger logger = LogManager.getLogger(Page.class);
 

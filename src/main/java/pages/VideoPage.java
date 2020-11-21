@@ -40,9 +40,11 @@ public class VideoPage extends Page{
     @Step("Selecting categories in the filter")
     public VideoCardDetailPage categoriesChoose(String category, String location, String language) {
         globalLoaderWait();
+        oneTrustAcceptButton.click();
         moreFilterButton.click();
         logger.info("Click on more filter button");
         categoryFilter.click();
+        globalLoaderWait();
         logger.info("Click on more category filter button");
         driver.findElement(By.xpath(String.format(checkbox,category))).click();
         waitForElement(globalLoader);

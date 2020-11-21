@@ -264,3 +264,394 @@
 2020-11-18 02:42:33,922 INFO f.EpamEventsTest [main] Cards match the rules of the category filter
 2020-11-18 02:42:33,922 INFO f.EpamEventsTest [main] Cards match the rules of the location filter
 2020-11-18 02:42:33,922 INFO f.EpamEventsTest [main] Cards match the rules of the language filter
+2020-11-21 15:28:45,650 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:33:26,653 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:33:32,259 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:33:32,472 ERROR p.Page [main] There is no global loader
+2020-11-21 15:33:34,128 INFO p.MainPage [main] Video page is opened
+2020-11-21 15:33:35,513 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 15:33:37,003 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 15:33:37,253 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:33:40,659 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:33:43,705 INFO p.MainPage [main] Event page is opened
+2020-11-21 15:33:44,786 INFO p.EventPage [main] Get card event date
+2020-11-21 15:33:44,830 INFO p.EventPage [main] Get the date from the event card
+2020-11-21 15:33:45,162 INFO p.EventPage [main] Get card event date
+2020-11-21 15:33:45,189 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-21 15:33:45,267 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:33:48,937 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:33:50,953 INFO p.MainPage [main] Event page is opened
+2020-11-21 15:33:52,054 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 15:33:52,057 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 15:33:52,382 INFO p.EventPage [main] Get card location
+2020-11-21 15:33:52,760 INFO f.EpamEventsTest [main] Card contains information about the location
+2020-11-21 15:33:52,760 INFO p.EventPage [main] Get card language
+2020-11-21 15:33:52,807 INFO f.EpamEventsTest [main] Card contains information about the language
+2020-11-21 15:33:52,807 INFO p.EventPage [main] Get card event title
+2020-11-21 15:33:52,851 INFO f.EpamEventsTest [main] Card contains information about the event title
+2020-11-21 15:33:52,851 INFO p.EventPage [main] Get card event date
+2020-11-21 15:33:52,890 INFO f.EpamEventsTest [main] Card contains information about the event date
+2020-11-21 15:33:52,890 INFO p.EventPage [main] Get card event status
+2020-11-21 15:33:52,928 INFO f.EpamEventsTest [main] Card contains information about the event status
+2020-11-21 15:33:52,929 INFO p.EventPage [main] Get card number of speakers
+2020-11-21 15:33:52,949 INFO f.EpamEventsTest [main] Card contains information about the speakers
+2020-11-21 15:33:53,027 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:33:56,333 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:33:58,405 INFO p.MainPage [main] Event page is opened
+2020-11-21 15:34:04,711 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:34:11,283 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:34:16,308 ERROR p.Page [main] There is no global loader
+2020-11-21 15:34:19,695 INFO p.MainPage [main] Event page is opened
+2020-11-21 15:34:20,724 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 15:34:20,724 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 15:34:21,032 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-21 15:34:21,079 INFO f.EpamEventsTest [main] Number of cards are equal number on counter
+2020-11-21 15:34:21,149 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:34:25,379 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:34:30,408 ERROR p.Page [main] There is no global loader
+2020-11-21 15:34:33,818 INFO p.MainPage [main] Event page is opened
+2020-11-21 15:34:49,526 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 15:34:55,834 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 15:35:00,888 ERROR p.Page [main] There is no global loader
+2020-11-21 15:35:02,327 INFO p.MainPage [main] Video page is opened
+2020-11-21 15:35:08,657 ERROR p.Page [main] There is no global loader
+2020-11-21 15:35:08,767 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 15:35:08,981 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 16:08:50,011 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:08:55,976 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:08:56,243 ERROR p.Page [main] There is no global loader
+2020-11-21 16:08:57,683 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:08:58,966 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 16:09:00,283 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 16:09:00,548 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:09:04,038 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:09:09,075 ERROR p.Page [main] There is no global loader
+2020-11-21 16:09:10,466 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:09:11,673 INFO p.EventPage [main] Get card event date
+2020-11-21 16:09:11,710 INFO p.EventPage [main] Get the date from the event card
+2020-11-21 16:09:12,064 INFO p.EventPage [main] Get card event date
+2020-11-21 16:09:12,094 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-21 16:09:12,172 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:09:15,483 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:09:17,100 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:09:18,062 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:09:18,067 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:09:18,407 INFO p.EventPage [main] Get card location
+2020-11-21 16:09:18,820 INFO f.EpamEventsTest [main] Card contains information about the location
+2020-11-21 16:09:18,821 INFO p.EventPage [main] Get card language
+2020-11-21 16:09:18,890 INFO f.EpamEventsTest [main] Card contains information about the language
+2020-11-21 16:09:18,891 INFO p.EventPage [main] Get card event title
+2020-11-21 16:09:18,941 INFO f.EpamEventsTest [main] Card contains information about the event title
+2020-11-21 16:09:18,941 INFO p.EventPage [main] Get card event date
+2020-11-21 16:09:18,989 INFO f.EpamEventsTest [main] Card contains information about the event date
+2020-11-21 16:09:18,989 INFO p.EventPage [main] Get card event status
+2020-11-21 16:09:19,033 INFO f.EpamEventsTest [main] Card contains information about the event status
+2020-11-21 16:09:19,033 INFO p.EventPage [main] Get card number of speakers
+2020-11-21 16:09:19,062 INFO f.EpamEventsTest [main] Card contains information about the speakers
+2020-11-21 16:09:19,145 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:09:24,130 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:09:29,155 ERROR p.Page [main] There is no global loader
+2020-11-21 16:09:30,481 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:09:36,671 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:09:39,994 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:09:45,046 ERROR p.Page [main] There is no global loader
+2020-11-21 16:09:46,303 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:09:47,317 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:09:47,317 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:09:47,604 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-21 16:09:47,639 INFO f.EpamEventsTest [main] Number of cards are equal number on counter
+2020-11-21 16:09:47,709 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:09:52,701 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:09:57,758 ERROR p.Page [main] There is no global loader
+2020-11-21 16:09:59,947 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:10:02,173 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-21 16:10:02,393 INFO p.EventPage [main] Click on the location filter
+2020-11-21 16:10:03,565 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:10:07,601 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:10:09,617 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:10:15,854 ERROR p.Page [main] There is no global loader
+2020-11-21 16:10:15,939 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 16:10:16,136 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 16:21:10,366 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:21:15,494 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:21:20,585 ERROR p.Page [main] There is no global loader
+2020-11-21 16:21:22,203 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:21:23,783 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 16:21:25,105 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 16:21:25,369 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:21:30,042 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:21:35,057 ERROR p.Page [main] There is no global loader
+2020-11-21 16:21:37,636 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:22:33,186 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:22:39,653 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:22:44,719 ERROR p.Page [main] There is no global loader
+2020-11-21 16:22:46,501 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:22:47,647 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 16:22:48,962 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 16:22:49,167 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:22:52,813 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:22:52,986 ERROR p.Page [main] There is no global loader
+2020-11-21 16:22:54,385 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:22:55,073 INFO p.EventPage [main] Get card event date
+2020-11-21 16:22:55,247 INFO p.EventPage [main] Get the date from the event card
+2020-11-21 16:22:55,528 INFO p.EventPage [main] Get card event date
+2020-11-21 16:22:55,572 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-21 16:22:55,656 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:23:01,330 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:23:06,376 ERROR p.Page [main] There is no global loader
+2020-11-21 16:23:09,129 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:23:25,629 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:23:35,044 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:23:40,083 ERROR p.Page [main] There is no global loader
+2020-11-21 16:23:43,423 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:23:59,205 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:24:04,637 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:24:09,697 ERROR p.Page [main] There is no global loader
+2020-11-21 16:24:12,164 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:24:27,891 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:24:34,572 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:24:39,607 ERROR p.Page [main] There is no global loader
+2020-11-21 16:24:43,555 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:24:59,338 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:25:03,719 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:25:08,737 ERROR p.Page [main] There is no global loader
+2020-11-21 16:25:10,862 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:25:17,015 ERROR p.Page [main] There is no global loader
+2020-11-21 16:25:17,150 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 16:25:17,396 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 16:26:08,788 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:26:13,257 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:26:15,172 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:26:16,283 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 16:26:17,553 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 16:26:17,775 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:26:22,463 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:26:27,479 ERROR p.Page [main] There is no global loader
+2020-11-21 16:26:29,075 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:26:30,307 INFO p.EventPage [main] Get card event date
+2020-11-21 16:26:30,357 INFO p.EventPage [main] Get the date from the event card
+2020-11-21 16:26:30,804 INFO p.EventPage [main] Get card event date
+2020-11-21 16:26:30,837 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-21 16:26:30,929 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:26:58,659 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:27:03,679 ERROR p.Page [main] There is no global loader
+2020-11-21 16:27:26,072 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:27:41,790 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:27:45,195 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:27:47,101 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:27:49,670 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:27:53,874 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:27:54,258 ERROR p.Page [main] There is no global loader
+2020-11-21 16:27:56,126 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:27:57,294 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:27:57,297 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:27:57,653 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-21 16:27:57,760 INFO f.EpamEventsTest [main] Number of cards are equal number on counter
+2020-11-21 16:27:57,858 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:28:03,434 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:28:08,459 ERROR p.Page [main] There is no global loader
+2020-11-21 16:28:10,270 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:28:12,197 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-21 16:28:12,408 INFO p.EventPage [main] Click on the location filter
+2020-11-21 16:28:13,581 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:28:17,684 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:28:22,693 ERROR p.Page [main] There is no global loader
+2020-11-21 16:28:24,542 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:28:30,913 ERROR p.Page [main] There is no global loader
+2020-11-21 16:28:31,060 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 16:28:31,301 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 16:30:27,685 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:30:32,422 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:30:32,621 ERROR p.Page [main] There is no global loader
+2020-11-21 16:30:35,685 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:30:36,476 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 16:30:37,805 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 16:30:38,075 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:30:42,452 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:30:47,493 ERROR p.Page [main] There is no global loader
+2020-11-21 16:30:48,917 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:30:50,126 INFO p.EventPage [main] Get card event date
+2020-11-21 16:30:50,190 INFO p.EventPage [main] Get the date from the event card
+2020-11-21 16:30:50,562 INFO p.EventPage [main] Get card event date
+2020-11-21 16:30:50,591 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-21 16:30:50,674 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:30:54,827 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:30:59,859 ERROR p.Page [main] There is no global loader
+2020-11-21 16:31:01,184 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:31:02,266 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:31:02,268 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:31:02,593 INFO p.EventPage [main] Get card location
+2020-11-21 16:31:02,944 INFO f.EpamEventsTest [main] Card contains information about the location
+2020-11-21 16:31:02,945 INFO p.EventPage [main] Get card language
+2020-11-21 16:31:02,996 INFO f.EpamEventsTest [main] Card contains information about the language
+2020-11-21 16:31:02,996 INFO p.EventPage [main] Get card event title
+2020-11-21 16:31:03,053 INFO f.EpamEventsTest [main] Card contains information about the event title
+2020-11-21 16:31:03,053 INFO p.EventPage [main] Get card event date
+2020-11-21 16:31:03,101 INFO f.EpamEventsTest [main] Card contains information about the event date
+2020-11-21 16:31:03,101 INFO p.EventPage [main] Get card event status
+2020-11-21 16:31:03,143 INFO f.EpamEventsTest [main] Card contains information about the event status
+2020-11-21 16:31:03,144 INFO p.EventPage [main] Get card number of speakers
+2020-11-21 16:31:03,177 INFO f.EpamEventsTest [main] Card contains information about the speakers
+2020-11-21 16:31:03,281 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:31:07,405 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:31:12,469 ERROR p.Page [main] There is no global loader
+2020-11-21 16:31:13,708 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:31:20,096 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:31:24,170 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:31:29,192 ERROR p.Page [main] There is no global loader
+2020-11-21 16:31:40,323 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:31:45,362 ERROR p.Page [main] There is no global loader
+2020-11-21 16:31:45,794 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:31:45,795 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:31:46,055 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-21 16:31:46,099 INFO f.EpamEventsTest [main] Number of cards are equal number on counter
+2020-11-21 16:31:46,174 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:31:49,571 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:31:49,783 ERROR p.Page [main] There is no global loader
+2020-11-21 16:31:51,019 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:31:51,039 ERROR p.Page [main] There is no global loader
+2020-11-21 16:31:53,015 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-21 16:31:53,315 INFO p.EventPage [main] Click on the location filter
+2020-11-21 16:31:54,694 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:31:58,148 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:32:00,181 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:32:06,520 ERROR p.Page [main] There is no global loader
+2020-11-21 16:32:06,663 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 16:32:12,190 ERROR p.Page [main] There is no global loader
+2020-11-21 16:32:12,190 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 16:34:28,995 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:34:33,957 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:34:39,257 ERROR p.Page [main] There is no global loader
+2020-11-21 16:34:40,735 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:34:47,023 ERROR p.Page [main] There is no global loader
+2020-11-21 16:39:29,833 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:39:34,534 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:39:39,783 ERROR p.Page [main] There is no global loader
+2020-11-21 16:39:41,134 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:39:47,472 ERROR p.Page [main] There is no global loader
+2020-11-21 16:42:43,419 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:42:48,723 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:42:50,357 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:42:50,379 ERROR p.Page [main] There is no global loader
+2020-11-21 16:42:53,515 INFO p.EventPage [main] Click on the Event Card
+2020-11-21 16:44:02,572 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:44:07,427 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:44:12,662 ERROR p.Page [main] There is no global loader
+2020-11-21 16:44:16,840 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:44:21,894 ERROR p.Page [main] There is no global loader
+2020-11-21 16:44:27,370 ERROR p.Page [main] There is no global loader
+2020-11-21 16:44:29,997 INFO p.EventPage [main] Click on the Event Card
+2020-11-21 16:44:30,973 INFO p.EventCardDetailsPage [main] Check if information block is displayed
+2020-11-21 16:44:31,017 INFO f.EpamEventsTest [main] Information block is displayed
+2020-11-21 16:44:44,736 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:44:49,787 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:44:51,733 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:44:53,029 INFO p.VideoPage [main] Write 'QA' value to the search field
+2020-11-21 16:44:54,340 INFO f.EpamEventsTest [main] Cards contain the search keyword in the title
+2020-11-21 16:44:54,546 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:44:58,062 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:44:59,950 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:44:59,980 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:00,536 INFO p.EventPage [main] Get card event date
+2020-11-21 16:45:00,925 INFO p.EventPage [main] Get the date from the event card
+2020-11-21 16:45:01,208 INFO p.EventPage [main] Get card event date
+2020-11-21 16:45:01,230 INFO f.EpamEventsTest [main] Dates of the events are greater than or equal to the current date and are within the current week
+2020-11-21 16:45:01,307 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:45:04,866 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:45:05,137 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:06,433 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:45:06,448 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:07,568 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:45:07,571 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:45:07,865 INFO p.EventPage [main] Get card location
+2020-11-21 16:45:08,157 INFO f.EpamEventsTest [main] Card contains information about the location
+2020-11-21 16:45:08,158 INFO p.EventPage [main] Get card language
+2020-11-21 16:45:08,196 INFO f.EpamEventsTest [main] Card contains information about the language
+2020-11-21 16:45:08,196 INFO p.EventPage [main] Get card event title
+2020-11-21 16:45:08,239 INFO f.EpamEventsTest [main] Card contains information about the event title
+2020-11-21 16:45:08,240 INFO p.EventPage [main] Get card event date
+2020-11-21 16:45:08,282 INFO f.EpamEventsTest [main] Card contains information about the event date
+2020-11-21 16:45:08,282 INFO p.EventPage [main] Get card event status
+2020-11-21 16:45:08,316 INFO f.EpamEventsTest [main] Card contains information about the event status
+2020-11-21 16:45:08,316 INFO p.EventPage [main] Get card number of speakers
+2020-11-21 16:45:08,334 INFO f.EpamEventsTest [main] Card contains information about the speakers
+2020-11-21 16:45:08,418 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:45:12,895 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:45:15,288 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:45:15,310 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:21,294 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:23,162 INFO p.EventPage [main] Click on the Event Card
+2020-11-21 16:45:24,183 INFO p.EventCardDetailsPage [main] Check if information block is displayed
+2020-11-21 16:45:24,217 INFO f.EpamEventsTest [main] Information block is displayed
+2020-11-21 16:45:24,302 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:45:27,972 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:45:33,095 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:34,322 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:45:35,354 INFO p.EventPage [main] Get actual number of cards on the page
+2020-11-21 16:45:35,354 INFO p.EventPage [main] Assert that page displays cards for upcoming events
+2020-11-21 16:45:35,654 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-21 16:45:35,691 INFO f.EpamEventsTest [main] Number of cards are equal number on counter
+2020-11-21 16:45:35,764 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:45:39,285 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:45:39,460 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:41,020 INFO p.MainPage [main] Event page is opened
+2020-11-21 16:45:41,039 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:42,647 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-21 16:45:42,808 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:42,808 INFO p.EventPage [main] Click on the location filter
+2020-11-21 16:45:44,041 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 16:45:47,895 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 16:45:50,949 INFO p.MainPage [main] Video page is opened
+2020-11-21 16:45:57,728 ERROR p.Page [main] There is no global loader
+2020-11-21 16:45:57,891 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 16:46:03,255 ERROR p.Page [main] There is no global loader
+2020-11-21 16:46:03,256 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 17:04:05,054 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 17:04:10,925 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 17:04:16,118 ERROR p.Page [main] There is no global loader
+2020-11-21 17:04:34,883 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 17:04:41,006 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 17:04:46,075 ERROR p.Page [main] There is no global loader
+2020-11-21 17:04:48,386 INFO p.MainPage [main] Event page is opened
+2020-11-21 17:04:50,054 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-21 17:04:50,226 INFO p.EventPage [main] Click on the location filter
+2020-11-21 17:07:11,809 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 17:07:16,852 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 17:07:22,097 ERROR p.Page [main] There is no global loader
+2020-11-21 17:07:23,855 INFO p.MainPage [main] Event page is opened
+2020-11-21 17:07:25,882 INFO p.EventPage [main] Click on the Past Event tab
+2020-11-21 17:07:26,280 INFO p.EventPage [main] Click on the location filter
+2020-11-21 17:07:26,564 INFO p.EventPage [main] Click on the Canada checkbox
+2020-11-21 17:07:27,113 INFO p.EventPage [main] Return the card number value of Past Events
+2020-11-21 17:07:27,143 INFO p.EventPage [main] Return the number of card from the counter
+2020-11-21 17:07:27,188 INFO p.EventPage [main] Get card event date
+2020-11-21 17:07:27,230 INFO p.EventPage [main] Get card event date
+2020-11-21 17:07:27,242 INFO p.EventPage [main] Get card event date
+2020-11-21 17:07:27,267 INFO f.EpamEventsTest [main] Cards are displayed on Past Events tab
+2020-11-21 17:07:27,268 INFO f.EpamEventsTest [main] Cards are equals number on counter
+2020-11-21 17:07:27,275 INFO f.EpamEventsTest [main] Dates of the events are less than the current date
+2020-11-21 17:08:08,259 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 17:08:17,279 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 17:08:22,347 ERROR p.Page [main] There is no global loader
+2020-11-21 17:08:23,707 INFO p.MainPage [main] Video page is opened
+2020-11-21 17:08:30,234 ERROR p.Page [main] There is no global loader
+2020-11-21 17:08:30,335 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 17:08:35,752 ERROR p.Page [main] There is no global loader
+2020-11-21 17:08:35,752 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 17:10:44,556 INFO f.WebFactory [main] Chrome docker image was successfully up
+2020-11-21 17:10:48,762 INFO f.EpamEventsTest [main] Events EPAM application was opened
+2020-11-21 17:10:50,823 INFO p.MainPage [main] Video page is opened
+2020-11-21 17:10:56,660 ERROR p.Page [main] There is no global loader
+2020-11-21 17:10:56,946 INFO p.VideoPage [main] Click on more filter button
+2020-11-21 17:11:02,303 ERROR p.Page [main] There is no global loader
+2020-11-21 17:11:02,303 INFO p.VideoPage [main] Click on more category filter button
+2020-11-21 17:11:03,359 INFO p.VideoPage [main] Click on more location filter button
+2020-11-21 17:11:04,064 INFO p.VideoPage [main] Click on more language filter button
+2020-11-21 17:11:06,051 INFO p.VideoPage [main] Open the event card
+2020-11-21 17:11:06,354 INFO p.VideoCardDetailPage [main] Get the category text
+2020-11-21 17:11:06,454 INFO p.VideoCardDetailPage [main] Get the location text
+2020-11-21 17:11:06,500 INFO p.VideoCardDetailPage [main] Get the language text
+2020-11-21 17:11:06,693 INFO p.VideoCardDetailPage [main] Return the list from the filter
+2020-11-21 17:11:06,701 INFO f.EpamEventsTest [main] Cards match the rules of the category filter
+2020-11-21 17:11:06,705 INFO f.EpamEventsTest [main] Cards match the rules of the location filter
+2020-11-21 17:11:06,705 INFO f.EpamEventsTest [main] Cards match the rules of the language filter

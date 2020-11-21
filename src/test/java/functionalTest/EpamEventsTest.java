@@ -2,12 +2,10 @@ package functionalTest;
 
 import config.ServerConfig;
 import factory.WebFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import lombok.SneakyThrows;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.logging.log4j.LogManager;
@@ -15,20 +13,12 @@ import org.apache.logging.log4j.Logger;
 import org.exparity.hamcrest.date.Moments;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.parallel.Execution;
-import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.EventPage;
 import pages.MainPage;
-import pages.Page;
 
 
-import java.net.URL;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.Map;
