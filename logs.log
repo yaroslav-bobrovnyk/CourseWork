@@ -655,6 +655,3 @@
 2020-11-21 17:11:06,701 INFO f.EpamEventsTest [main] Cards match the rules of the category filter
 2020-11-21 17:11:06,705 INFO f.EpamEventsTest [main] Cards match the rules of the location filter
 2020-11-21 17:11:06,705 INFO f.EpamEventsTest [main] Cards match the rules of the language filter
-
-2020-11-21 17:11:02,303 INFO p.VideoPage [main] Click on more category filter button
-
