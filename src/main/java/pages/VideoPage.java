@@ -40,7 +40,6 @@ public class VideoPage extends Page{
     @Step("Selecting categories in the filter")
     public VideoCardDetailPage categoriesChoose(String category, String location, String language) {
         globalLoaderWait();
-        oneTrustAcceptButton.click();
         moreFilterButton.click();
         logger.info("Click on more filter button");
         categoryFilter.click();

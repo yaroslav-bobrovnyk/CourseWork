@@ -138,7 +138,6 @@ public class EventPage extends Page{
         pastEventsTab.click();
         waitForElement(globalLoader);
         logger.info("Click on the Past Event tab");
-        oneTrustAcceptButton.click();
         filterLocation.click();
         waitForElement(globalLoader);
         logger.info("Click on the location filter");
@@ -153,7 +152,6 @@ public class EventPage extends Page{
     @Step("Open Event Card details page")
     public EventCardDetailsPage eventCardOpen(){
         globalLoaderWait();
-        oneTrustAcceptButton.click();
         eventCard.click();
         logger.info("Click on the Event Card");
         return new EventCardDetailsPage(driver);

@@ -29,6 +29,7 @@ public class MainPage extends Page{
     @Step("The Events Page is open")
     public EventPage eventPageOpen(){
         globalLoaderWait();
+        oneTrustAcceptButton.click();
         eventNavButton.click();
         logger.info("Event page is opened");
         globalLoaderWait();
@@ -39,6 +40,7 @@ public class MainPage extends Page{
     @Step("The Video Page is open")
     public VideoPage videoPageOpen(){
         globalLoaderWait();
+        oneTrustAcceptButton.click();
         videoBavButton.click();
         logger.info("Video page is opened");
         globalLoaderWait();
