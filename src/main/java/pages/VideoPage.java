@@ -31,7 +31,7 @@ public class VideoPage extends Page{
 
     String checkbox = "//label[@data-value=\"%s\"]";
 
-    private static Logger logger = LogManager.getLogger(VideoPage.class);
+    private static final Logger logger = LogManager.getLogger(VideoPage.class);
 
     public VideoPage(WebDriver webDriver) {
         super(webDriver);
@@ -47,15 +47,15 @@ public class VideoPage extends Page{
         globalLoaderWait();
         logger.info("Click on more category filter button");
         driver.findElement(By.xpath(String.format(checkbox,category))).click();
-        waitForElement(globalLoader);
+        globalLoaderWait();
         locationFilter.click();
         logger.info("Click on more location filter button");
         driver.findElement(By.xpath(String.format(checkbox,location))).click();
-        waitForElement(globalLoader);
+        globalLoaderWait();
         languageFilter.click();
         logger.info("Click on more language filter button");
         driver.findElement(By.xpath(String.format(checkbox,language))).click();
-        waitForElement(globalLoader);
+        globalLoaderWait();
         Allure.addAttachment("Chosen categories on the Video page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         eventCard.click();
         logger.info("Open the event card");
@@ -64,10 +64,11 @@ public class VideoPage extends Page{
 
     @Step("Enters a keyword into the search box")
     public String keywordSearch(String keyword) {
+        globalLoaderWait();
         searchField.click();
         searchField.sendKeys(keyword);
         logger.info("Write 'QA' value to the search field");
-        waitForElement(globalLoader);
+        globalLoaderWait();
         Allure.addAttachment("Speech search by keyword", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return textTitle.getText();
     }

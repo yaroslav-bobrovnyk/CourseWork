@@ -12,15 +12,15 @@ import java.io.ByteArrayInputStream;
 
 
 public class MainPage extends Page{
-    @FindBy(css=".nav-item.events-icon")
+    @FindBy(css=".events-icon")
     @CacheLookup
     public WebElement eventNavButton;
 
-    @FindBy(css=".talks-library-icon .nav-link")
+    @FindBy(css=".talks-library-icon")
     @CacheLookup
     public WebElement videoBavButton;
 
-    private static Logger logger = LogManager.getLogger(MainPage.class);
+    private static final Logger logger = LogManager.getLogger(MainPage.class);
 
     public MainPage(WebDriver webDriver) {
         super(webDriver);
@@ -41,7 +41,7 @@ public class MainPage extends Page{
         globalLoaderWait();
         videoBavButton.click();
         logger.info("Video page is opened");
-        waitForElement(globalLoader);
+        globalLoaderWait();
         Allure.addAttachment("Epam Video page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return new VideoPage(driver);
     }

@@ -18,7 +18,7 @@ public class EventCardDetailsPage extends Page {
     @FindBy(css=".evnt-content-wrapper")
     @CacheLookup
     public WebElement informationBlock;
-    private static Logger logger = LogManager.getLogger(EventCardDetailsPage.class);
+    private static final Logger logger = LogManager.getLogger(EventCardDetailsPage.class);
 
     public EventCardDetailsPage(WebDriver webDriver) { super(webDriver); }
 

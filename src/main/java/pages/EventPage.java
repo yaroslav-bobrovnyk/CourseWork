@@ -60,7 +60,7 @@ public class EventPage extends Page{
     @FindBy(xpath="//label[@data-value=\"Canada\"]")
     @CacheLookup public WebElement canadaCheckbox;
 
-    private static Logger logger = LogManager.getLogger(EventPage.class);
+    private static final Logger logger = LogManager.getLogger(EventPage.class);
 
     public EventPage(WebDriver webDriver) { super(webDriver); }
 

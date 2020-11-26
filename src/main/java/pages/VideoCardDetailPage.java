@@ -25,7 +25,7 @@ public class VideoCardDetailPage extends Page{
     @FindBy(css=".evnt-card-table .language span")
     @CacheLookup public WebElement languageCheck;
 
-    private static Logger logger = LogManager.getLogger(VideoCardDetailPage.class);
+    private static final Logger logger = LogManager.getLogger(VideoCardDetailPage.class);
 
     public VideoCardDetailPage(WebDriver webDriver) {super(webDriver);}
 

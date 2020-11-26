@@ -11,7 +11,7 @@ import java.net.URL;
 
 public class WebFactory {
 
-    private static Logger logger = LogManager.getLogger(WebFactory.class);
+    private static final Logger logger = LogManager.getLogger(WebFactory.class);
 
     public enum Browsers{
         CHROME,

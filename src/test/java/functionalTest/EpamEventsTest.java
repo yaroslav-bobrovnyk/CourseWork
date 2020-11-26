@@ -28,7 +28,7 @@ import static org.hamcrest.Matchers.*;
 import static org.exparity.hamcrest.date.DateMatchers.*;
 
 public class EpamEventsTest {
-    WebDriver driver;
+    private WebDriver driver;
     private final ServerConfig cfg = ConfigFactory.create(ServerConfig.class);
     private static final Logger logger = LogManager.getLogger(EpamEventsTest.class);
     private static MainPage mainPage;
@@ -41,9 +41,9 @@ public class EpamEventsTest {
             browser="chrome";
         }
         driver=WebFactory.create(WebFactory.Browsers.valueOf(browser.toUpperCase()));
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        mainPage=new MainPage(driver);
         driver.get(cfg.url());
+        driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+        mainPage=new MainPage(driver);
         logger.info("Events EPAM application was opened");
     }
 
@@ -54,9 +54,7 @@ public class EpamEventsTest {
     @Description("This test verifies that cards are displayed on Upcoming Events tab and number of cards are equal counter on Upcoming Events button")
         public void upcomingEventsReviewTest(){
         EventPage eventPage=new EventPage(driver);
-        int actualNumberOfCards=mainPage.eventPageOpen().cardNumberOfUpcomingEvents();
-        int numberOfCardsOnCounter=eventPage.counterNumberOfUpcomingEvents();
-        assertThat(actualNumberOfCards, equalTo(numberOfCardsOnCounter));
+        assertThat(mainPage.eventPageOpen().cardNumberOfUpcomingEvents(), equalTo(eventPage.counterNumberOfUpcomingEvents()));
         logger.info("Number of cards are equal number on counter");
     }
 
@@ -152,8 +150,7 @@ public class EpamEventsTest {
     @Description("The page displays reports containing the search keyword in the title")
     public void reportSearchByKeywordTest() {
         String keyword="QA";
-        String reportTitle=mainPage.videoPageOpen().keywordSearch(keyword);
-        assertThat(reportTitle,containsString(keyword));
+        assertThat(mainPage.videoPageOpen().keywordSearch(keyword),containsString(keyword));
         logger.info("Cards contain the search keyword in the title");
     }
 
