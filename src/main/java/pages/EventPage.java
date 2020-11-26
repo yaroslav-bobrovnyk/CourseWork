@@ -147,6 +147,7 @@ public class EventPage extends Page{
         Allure.addAttachment("Past Events cards on Events page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         logger.info("Return the card number value of Past Events");
         return numberPastEventsCard.size();
+
     }
 
     @Step("Open Event Card details page")
